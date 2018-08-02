@@ -13,6 +13,8 @@
 		58474A3E2112F19C001A89B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58474A3D2112F19C001A89B2 /* Assets.xcassets */; };
 		58474A412112F19C001A89B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58474A3F2112F19C001A89B2 /* LaunchScreen.storyboard */; };
 		58474A442112F19C001A89B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58474A432112F19C001A89B2 /* main.m */; };
+		58474A4F2112F1B7001A89B2 /* LFSegmentContrCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58474A4C2112F1B7001A89B2 /* LFSegmentContrCell.m */; };
+		58474A502112F1B7001A89B2 /* LFSegmentContrController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58474A4E2112F1B7001A89B2 /* LFSegmentContrController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		58474A402112F19C001A89B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58474A422112F19C001A89B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58474A432112F19C001A89B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		58474A4B2112F1B7001A89B2 /* LFSegmentContrCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFSegmentContrCell.h; sourceTree = "<group>"; };
+		58474A4C2112F1B7001A89B2 /* LFSegmentContrCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFSegmentContrCell.m; sourceTree = "<group>"; };
+		58474A4D2112F1B7001A89B2 /* LFSegmentContrController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFSegmentContrController.h; sourceTree = "<group>"; };
+		58474A4E2112F1B7001A89B2 /* LFSegmentContrController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFSegmentContrController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		58474A332112F19A001A89B2 /* LFSegmentContr */ = {
 			isa = PBXGroup;
 			children = (
+				58474A4A2112F1B7001A89B2 /* Segment */,
 				58474A342112F19A001A89B2 /* AppDelegate.h */,
 				58474A352112F19A001A89B2 /* AppDelegate.m */,
 				58474A372112F19A001A89B2 /* ViewController.h */,
@@ -69,6 +76,17 @@
 				58474A432112F19C001A89B2 /* main.m */,
 			);
 			path = LFSegmentContr;
+			sourceTree = "<group>";
+		};
+		58474A4A2112F1B7001A89B2 /* Segment */ = {
+			isa = PBXGroup;
+			children = (
+				58474A4B2112F1B7001A89B2 /* LFSegmentContrCell.h */,
+				58474A4C2112F1B7001A89B2 /* LFSegmentContrCell.m */,
+				58474A4D2112F1B7001A89B2 /* LFSegmentContrController.h */,
+				58474A4E2112F1B7001A89B2 /* LFSegmentContrController.m */,
+			);
+			path = Segment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +161,9 @@
 			files = (
 				58474A392112F19A001A89B2 /* ViewController.m in Sources */,
 				58474A442112F19C001A89B2 /* main.m in Sources */,
+				58474A502112F1B7001A89B2 /* LFSegmentContrController.m in Sources */,
 				58474A362112F19A001A89B2 /* AppDelegate.m in Sources */,
+				58474A4F2112F1B7001A89B2 /* LFSegmentContrCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
