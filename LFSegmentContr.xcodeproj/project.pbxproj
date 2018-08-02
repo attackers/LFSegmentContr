@@ -15,9 +15,12 @@
 		58474A442112F19C001A89B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58474A432112F19C001A89B2 /* main.m */; };
 		58474A4F2112F1B7001A89B2 /* LFSegmentContrCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58474A4C2112F1B7001A89B2 /* LFSegmentContrCell.m */; };
 		58474A502112F1B7001A89B2 /* LFSegmentContrController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58474A4E2112F1B7001A89B2 /* LFSegmentContrController.m */; };
+		65A5D78B238700A42B594520 /* libPods-LFSegmentContr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 658560BF714FCF83D3B11593 /* libPods-LFSegmentContr.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C007DE1AC5AA2333D1A9E2D /* Pods-LFSegmentContr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFSegmentContr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFSegmentContr/Pods-LFSegmentContr.debug.xcconfig"; sourceTree = "<group>"; };
+		4E1F2782A6F0E6C15CCDE14E /* Pods-LFSegmentContr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFSegmentContr.release.xcconfig"; path = "Pods/Target Support Files/Pods-LFSegmentContr/Pods-LFSegmentContr.release.xcconfig"; sourceTree = "<group>"; };
 		58474A312112F19A001A89B2 /* LFSegmentContr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LFSegmentContr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58474A342112F19A001A89B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58474A352112F19A001A89B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		58474A4C2112F1B7001A89B2 /* LFSegmentContrCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFSegmentContrCell.m; sourceTree = "<group>"; };
 		58474A4D2112F1B7001A89B2 /* LFSegmentContrController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFSegmentContrController.h; sourceTree = "<group>"; };
 		58474A4E2112F1B7001A89B2 /* LFSegmentContrController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFSegmentContrController.m; sourceTree = "<group>"; };
+		658560BF714FCF83D3B11593 /* libPods-LFSegmentContr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LFSegmentContr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A5D78B238700A42B594520 /* libPods-LFSegmentContr.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0C284B5DC1D6B5A9E8AB88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C007DE1AC5AA2333D1A9E2D /* Pods-LFSegmentContr.debug.xcconfig */,
+				4E1F2782A6F0E6C15CCDE14E /* Pods-LFSegmentContr.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		48810048DA32958846991F57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				658560BF714FCF83D3B11593 /* libPods-LFSegmentContr.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		58474A282112F19A001A89B2 = {
 			isa = PBXGroup;
 			children = (
 				58474A332112F19A001A89B2 /* LFSegmentContr */,
 				58474A322112F19A001A89B2 /* Products */,
+				2B0C284B5DC1D6B5A9E8AB88 /* Pods */,
+				48810048DA32958846991F57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +120,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58474A472112F19C001A89B2 /* Build configuration list for PBXNativeTarget "LFSegmentContr" */;
 			buildPhases = (
+				09250871FD5C9FDA42B95EE9 /* [CP] Check Pods Manifest.lock */,
 				58474A2D2112F19A001A89B2 /* Sources */,
 				58474A2E2112F19A001A89B2 /* Frameworks */,
 				58474A2F2112F19A001A89B2 /* Resources */,
@@ -153,6 +178,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09250871FD5C9FDA42B95EE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LFSegmentContr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58474A2D2112F19A001A89B2 /* Sources */ = {
@@ -301,14 +347,12 @@
 		};
 		58474A482112F19C001A89B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C007DE1AC5AA2333D1A9E2D /* Pods-LFSegmentContr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LFSegmentContr/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leaf.LFSegmentContr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,14 +361,12 @@
 		};
 		58474A492112F19C001A89B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E1F2782A6F0E6C15CCDE14E /* Pods-LFSegmentContr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LFSegmentContr/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leaf.LFSegmentContr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
