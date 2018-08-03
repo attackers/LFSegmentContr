@@ -17,14 +17,25 @@
 
 static NSString * const reuseIdentifier = @"LFSegmentContrCell";
 
-+ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray<NSString*>*)items {
++ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray<NSString*>*)items frame:(CGRect)rect inBounds:(BOOL)inBounds{
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    if (inBounds) {
+        layout.itemSize = CGSizeMake(CGRectGetWidth(rect)/items.count, CGRectGetHeight(rect));
+    }else {
+        if (items.count > 4) {
+            layout.itemSize = CGSizeMake(CGRectGetWidth(rect)/4, CGRectGetHeight(rect));
+        } else {
+            layout.itemSize = CGSizeMake(CGRectGetWidth(rect)/items.count, CGRectGetHeight(rect));
+        }
+    }
+    layout.sectionInset = UIEdgeInsetsMake(0, 0.0, 0, 0.0);
+    layout.minimumInteritemSpacing = 0.0;
+    layout.minimumLineSpacing = 0.0;
     LFSegmentContrController *segmented = [[LFSegmentContrController alloc]initWithCollectionViewLayout:layout];
     segmented.itemsArray = items;
-    CGFloat h = CGRectGetMaxY([UIApplication sharedApplication].statusBarFrame);
-    h = h>=44? 140 : 116;
-    segmented.view.frame = CGRectMake(0,0,CGRectGetWidth([UIScreen mainScreen].bounds), h);
+    segmented.view.frame = rect;
+    segmented.view.backgroundColor = [UIColor greenColor];
     return segmented;
 }
 - (void)viewWillAppear:(BOOL)animated
@@ -66,16 +77,16 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
     [cell setContent:_itemsArray[indexPath.row]];
     return cell;
 }
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
-    if (_itemsArray.count > 4) {
-        return CGSizeMake(width/4, 49);
-    }
-    return CGSizeMake(width/_itemsArray.count, 49);
-}
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return  UIEdgeInsetsMake(1, 0, 1, 0);
-}
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+//    CGFloat width = CGRectGetWidth(self.view.frame);
+//    if (_itemsArray.count > 4) {
+//        return CGSizeMake(width/4, CGRectGetHeight(_selfFrame));
+//    }
+//    return CGSizeMake(width/_itemsArray.count, CGRectGetHeight(_selfFrame));
+//}
+//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+//    return  UIEdgeInsetsMake(1, 0, 1, 0);
+//}
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
 }

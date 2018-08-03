@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "LFSegmentContrController.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor yellowColor];
+    LFSegmentContrController *segment = [LFSegmentContrController initBeeMessageTypeSegmentedControllerItems:@[@"待付款",@"抢购中",@"待收货",@"已完成",@"退换货"] frame:CGRectMake(10, 60, CGRectGetWidth(UIScreen.mainScreen.bounds) - 20, 50) inBounds:YES];
+    [self addChildViewController:segment];
+    [self.view addSubview:segment.view];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

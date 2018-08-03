@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 @interface LFSegmentContrController : UICollectionViewController
 @property (nonatomic, strong) NSArray<NSString*> *itemsArray;
-+ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray<NSString*>*)items;
+@property (nonatomic, assign) CGRect selfFrame;
+
++ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray<NSString*>*)items frame:(CGRect)rect inBounds:(BOOL)inBounds;
 - (void)segmentedClickItem:(void(^)(NSInteger index))indexPath;
 - (void)setSelectItemIndex:(NSInteger)index;
 @end

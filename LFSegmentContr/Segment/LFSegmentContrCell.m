@@ -18,15 +18,18 @@
     if (self) {
         self.contentView.backgroundColor = [UIColor whiteColor];
 
+        _topImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame)*0.7)];
+
+        _topImageView.contentMode = UIViewContentModeScaleAspectFit;
+        [self.contentView addSubview:_topImageView];
         
-        _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame))];
+        _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_topImageView.frame), CGRectGetWidth(frame), CGRectGetHeight(frame)*0.3)];
         _titleLabel.highlightedTextColor = [UIColor redColor];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.font = [UIFont systemFontOfSize:13];
         [self.contentView addSubview:_titleLabel];
         
-        _topImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, CGRectGetHeight(frame) - 1.5 , CGRectGetWidth(frame), 1.5)];
-        _topImageView.highlightedImage = [UIImage imageNamed:@"BeeMessageTypeBottomBackground"];
-        [self.contentView addSubview:_topImageView];
+    
 
     }
     return self;
