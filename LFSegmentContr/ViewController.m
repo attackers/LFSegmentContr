@@ -17,7 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
-    LFSegmentContrController *segment = [LFSegmentContrController initBeeMessageTypeSegmentedControllerItems:@[@"待付款",@"抢购中",@"待收货",@"已完成",@"退换货",@"待付款",@"抢购中",@"待收货",@"已完成",@"退换货",@"待付款",@"抢购中",@"待收货",@"已完成",@"退换货"] frame:CGRectMake(10, 60, CGRectGetWidth(UIScreen.mainScreen.bounds) - 20, 200) inBounds:false];
+    CGFloat h = (CGRectGetWidth(UIScreen.mainScreen.bounds) - 20)/4 * 5;
+    LFSegmentContrController *segment = [LFSegmentContrController initBeeMessageTypeSegmentedControllerItems:@[@"待付款",@"抢购中",@"待收货",@"已完成",@"退换货",@"待付款",@"抢购中",@"待收货",@"已完成",@"退换货",@"待付款",@"抢购中",@"待收货",@"已完成",@"退换货",@"已完成",@"退换货"] frame:CGRectMake(10, 60, CGRectGetWidth(UIScreen.mainScreen.bounds) - 20, h) horizontalCount:4];
+    
+    
+    
     [self addChildViewController:segment];
     [self.view addSubview:segment.view];
     // Do any additional setup after loading the view, typically from a nib.

@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LFSegmentContr/Segment/LFSegmentContrController.m"
-            timestampString = "554959122.040006"
+            timestampString = "554984896.637579"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "+initBeeMessageTypeSegmentedControllerItems:frame:inBounds:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LFSegmentContr/Segment/LFSegmentContrController.m"
+            timestampString = "554984896.6376359"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "+initBeeMessageTypeSegmentedControllerItems:frame:horizontalCount:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

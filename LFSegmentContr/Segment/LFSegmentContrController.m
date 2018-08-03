@@ -42,7 +42,7 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
 
 + (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray<NSString*>*)items frame:(CGRect)rect horizontalCount:(NSInteger)count{
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     layout.itemSize = CGSizeMake(CGRectGetWidth(rect)/count, CGRectGetWidth(rect)/count);
     layout.sectionInset = UIEdgeInsetsMake(0, 0.0, 0, 0.0);
     layout.minimumInteritemSpacing = 0.0;
@@ -103,9 +103,9 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
 //- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
 //    return  UIEdgeInsetsMake(1, 0, 1, 0);
 //}
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 0;
-}
+//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+//    return 0;
+//}
 #pragma mark <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
