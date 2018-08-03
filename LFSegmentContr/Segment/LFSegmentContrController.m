@@ -29,6 +29,7 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
             layout.itemSize = CGSizeMake(CGRectGetWidth(rect)/items.count, CGRectGetHeight(rect));
         }
     }
+    
     layout.sectionInset = UIEdgeInsetsMake(0, 0.0, 0, 0.0);
     layout.minimumInteritemSpacing = 0.0;
     layout.minimumLineSpacing = 0.0;
@@ -38,6 +39,21 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
     segmented.view.backgroundColor = [UIColor greenColor];
     return segmented;
 }
+
++ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray<NSString*>*)items frame:(CGRect)rect horizontalCount:(NSInteger)count{
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    layout.itemSize = CGSizeMake(CGRectGetWidth(rect)/count, CGRectGetWidth(rect)/count);
+    layout.sectionInset = UIEdgeInsetsMake(0, 0.0, 0, 0.0);
+    layout.minimumInteritemSpacing = 0.0;
+    layout.minimumLineSpacing = 0.0;
+    LFSegmentContrController *segmented = [[LFSegmentContrController alloc]initWithCollectionViewLayout:layout];
+    segmented.itemsArray = items;
+    segmented.view.frame = rect;
+    segmented.view.backgroundColor = [UIColor greenColor];
+    return segmented;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
