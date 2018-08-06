@@ -44,4 +44,12 @@
  @param index 所选择的下标
  */
 - (void)setSelectItemIndex:(NSInteger)index;
+
+
+/**
+ 设置CollectionView背景颜色
+
+ @param color 需要设置的颜色
+ */
+- (void)setCollectionViewBackgroundColor:(UIColor*)color;
 @end

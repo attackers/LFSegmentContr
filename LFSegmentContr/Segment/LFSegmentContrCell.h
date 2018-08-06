@@ -10,4 +10,6 @@
 
 @interface LFSegmentContrCell : UICollectionViewCell
 - (void)setContent:(NSString*)title;
+- (void)setContentTitle:(NSString*)title img:(NSString*)name;
+
 @end

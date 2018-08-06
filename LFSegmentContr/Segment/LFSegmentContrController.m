@@ -50,7 +50,6 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
     LFSegmentContrController *segmented = [[LFSegmentContrController alloc]initWithCollectionViewLayout:layout];
     segmented.itemsArray = items;
     segmented.view.frame = rect;
-    segmented.view.backgroundColor = [UIColor greenColor];
     return segmented;
 }
 
@@ -65,11 +64,10 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
     [self.collectionView registerClass:[LFSegmentContrCell class] forCellWithReuseIdentifier:reuseIdentifier];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.collectionView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredVertically];
 }
 
@@ -93,19 +91,6 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
     [cell setContent:_itemsArray[indexPath.row]];
     return cell;
 }
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-//    CGFloat width = CGRectGetWidth(self.view.frame);
-//    if (_itemsArray.count > 4) {
-//        return CGSizeMake(width/4, CGRectGetHeight(_selfFrame));
-//    }
-//    return CGSizeMake(width/_itemsArray.count, CGRectGetHeight(_selfFrame));
-//}
-//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-//    return  UIEdgeInsetsMake(1, 0, 1, 0);
-//}
-//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-//    return 0;
-//}
 #pragma mark <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
@@ -119,4 +104,9 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
         indexPath(index);
     };
 }
+
+- (void)setCollectionViewBackgroundColor:(UIColor*)color {
+    self.collectionView.backgroundColor = color;
+}
+
 @end

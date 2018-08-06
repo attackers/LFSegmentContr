@@ -38,4 +38,9 @@
     _titleLabel.text = title;
     _topImageView.image = [UIImage imageNamed:title];
 }
+- (void)setContentTitle:(NSString*)title img:(NSString*)name {
+    _titleLabel.text = title;
+    _topImageView.image = [UIImage imageNamed:name];
+}
+
 @end
