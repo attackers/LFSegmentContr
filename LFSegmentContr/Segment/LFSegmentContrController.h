@@ -19,7 +19,7 @@
  @param inBounds 是否在可视区域展示，不滑动
  @return 返回类型
  */
-+ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray<NSString*>*)items frame:(CGRect)rect inBounds:(BOOL)inBounds;
++ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray*)items frame:(CGRect)rect inBounds:(BOOL)inBounds;
 
 /**
  初始化
@@ -29,7 +29,7 @@
  @param count 一排显示几个
  @return 返回类型
  */
-+ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray<NSString*>*)items frame:(CGRect)rect horizontalCount:(NSInteger)count;
++ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray*)items frame:(CGRect)rect horizontalCount:(NSInteger)count;
 
 /**
 返回选择的当前item

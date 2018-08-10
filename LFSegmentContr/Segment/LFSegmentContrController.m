@@ -17,7 +17,7 @@
 
 static NSString * const reuseIdentifier = @"LFSegmentContrCell";
 
-+ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray<NSString*>*)items frame:(CGRect)rect inBounds:(BOOL)inBounds{
++ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray*)items frame:(CGRect)rect inBounds:(BOOL)inBounds{
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     if (inBounds) {
@@ -40,7 +40,7 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
     return segmented;
 }
 
-+ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray<NSString*>*)items frame:(CGRect)rect horizontalCount:(NSInteger)count{
++ (LFSegmentContrController*)initBeeMessageTypeSegmentedControllerItems:(NSArray*)items frame:(CGRect)rect horizontalCount:(NSInteger)count{
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     layout.itemSize = CGSizeMake(CGRectGetWidth(rect)/count, CGRectGetWidth(rect)/count);
@@ -86,9 +86,11 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _itemsArray.count;
 }
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     LFSegmentContrCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    [cell setContent:_itemsArray[indexPath.row]];
+    id objc = _itemsArray[indexPath.row];
+    [cell setContentTitle:[objc objectForKey:@"name"] img:[objc objectForKey:@"icon"]];
     return cell;
 }
 #pragma mark <UICollectionViewDelegate>
