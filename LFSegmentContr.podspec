@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LFSegmentContr"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "并排的多个选择按钮"
 
   # This description is used to generate tags and improve search results.

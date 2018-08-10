@@ -89,7 +89,7 @@ static NSString * const reuseIdentifier = @"LFSegmentContrCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     LFSegmentContrCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    id objc = _itemsArray[indexPath.row];
+    NSDictionary* objc = _itemsArray[indexPath.row];
     [cell setContentTitle:[objc objectForKey:@"name"] img:[objc objectForKey:@"icon"]];
     return cell;
 }

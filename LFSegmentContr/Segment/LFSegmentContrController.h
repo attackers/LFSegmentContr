@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @interface LFSegmentContrController : UICollectionViewController
-@property (nonatomic, strong) NSArray<NSString*> *itemsArray;
+@property (nonatomic, strong) NSArray *itemsArray;
 @property (nonatomic, assign) CGRect selfFrame;
 
 /**
